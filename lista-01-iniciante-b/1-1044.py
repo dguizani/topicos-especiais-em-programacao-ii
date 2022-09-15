@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 
-v1 = int(input())
+v1, v2 = input().split()
 
-v2 = int(input())
-
-if v2 % v1 == 0:
+if float(v2) % float(v1) == 0 or float(v1) % float(v2) == 0:
     print("Sao Multiplos")
 else:
     print("Nao Sao Multiplos")
