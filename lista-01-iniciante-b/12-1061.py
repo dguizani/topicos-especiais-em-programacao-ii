@@ -19,7 +19,8 @@ duracao = data_fim - data_inicio
 
 dia = duracao.days
 
-hora, minuto, segundo = [int(x) for x in str(duracao).split()[-1].split(":")]
+minuto, segundo = divmod(duracao.seconds, 60)
+hora, minuto = divmod(minuto, 60)
 
 print(f"{dia} dia(s)")
 print(f"{hora} hora(s)")
