@@ -12,12 +12,7 @@ if h1 == h2:
     h_diff = 24
     m_diff = 0
 else:
-    s_diff = (h2 - h1).seconds
-    h_diff = s_diff // 60 // 60
-    
-    if h_diff > 0:
-        m_diff = (s_diff - h_diff) // 60 // 60
-    else:
-        m_diff = s_diff // 60
+    m_diff, segundo = divmod((h2 - h1).seconds, 60)
+    h_diff, m_diff = divmod(m_diff, 60)
 
 print(f"O JOGO DUROU {h_diff} HORA(S) E {m_diff} MINUTO(S)")
