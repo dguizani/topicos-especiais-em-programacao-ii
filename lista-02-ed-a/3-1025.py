@@ -18,10 +18,8 @@ while True:
     for c in q_consulta:
         try:
             idx = e_marmore.index(c) + 1
+            print(f"{c} found at {idx}")
         except ValueError:
             print(f"{c} not found")
-            continue
-        
-        print(f"{c} found at {idx}")
     
     caso += 1
