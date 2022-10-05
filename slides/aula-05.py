@@ -38,8 +38,8 @@ class Pessoa():
     def __init__(self, nome, altura, peso) -> None:
         nome_compelo = nome.split()
         
-        self.nome = nome_compelo[1]
-        self.sobrenome = nome_compelo[0]
+        self.nome = nome_compelo[0]
+        self.sobrenome = nome_compelo[1]
         self.altura = int(altura)
         self.peso = int(peso)
     
