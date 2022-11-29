@@ -63,15 +63,12 @@ class Grafo:
 
 
 while (n := int(input())) != 0:
-    pessoa_relacoes = dict()
     grafo = Grafo(n)
-    resp: str = None
     
     for _ in range(n):
-        k = int(input())
-        pessoa_relacoes[k] = [int(x) for x in input().split()]
-    
-    for p, relacoes in pessoa_relacoes.items():
+        p = int(input())
+        relacoes = [int(x) for x in input().split()]
+        
         for r in relacoes:
             grafo.add_aresta(p, r)
 
